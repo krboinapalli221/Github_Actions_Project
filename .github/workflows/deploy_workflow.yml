@@ -16,7 +16,7 @@ jobs:
 
       - name: Run ESLint
         run: npx eslint . --ext .js,.jsx
-  bulid Code:
+  build_Code:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
