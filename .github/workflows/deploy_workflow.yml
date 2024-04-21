@@ -15,7 +15,10 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx
+        run: npm lint
+      - name: Run Test
+        run: npm test
+        
   build_Code:
     runs-on: ubuntu-latest
     steps:
