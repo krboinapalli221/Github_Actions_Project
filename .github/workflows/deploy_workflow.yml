@@ -16,3 +16,19 @@ jobs:
 
       - name: Run ESLint
         run: npx eslint . --ext .js,.jsx
+  bulid Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+      - name: Build code
+        run: npm run build
+      - name: Deoloy Project
+        run: echo " Deploying ..."
